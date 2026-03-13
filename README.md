@@ -1,25 +1,34 @@
 # Mini Gestor de Seguros - Backend ⚙️
 
-Backend robusto desenvolvido em Java para suportar as operações do sistema de seguros. O projeto foi estruturado para simular um ambiente real de produção, focando em escalabilidade e boas práticas.
+API robusta desenvolvida em Java para suporte ao sistema de gerenciamento de seguros. O foco do projeto é a implementação de uma arquitetura escalável utilizando banco de dados NoSQL.
 
-## 🚀 Tecnologias e Conceitos Estudados
+## 🚀 Stack Tecnológica
 
-* **Spring Boot 4**: Utilização do framework mais popular do ecossistema Java para criação de microserviços e APIs REST.
-* **Java 17**: Uso da versão de suporte de longo prazo (LTS) do Java para aproveitar as melhorias de performance e sintaxe.
-* **MongoDB**: Implementação de banco de dados NoSQL para armazenamento flexível de documentos de clientes e apólices.
-* **Arquitetura REST**: Exposição de endpoints para operações de CRUD (Create, Read, Update, Delete).
-* **CORS Configuration**: Configuração de segurança para permitir a comunicação controlada entre o frontend (Angular) e o backend.
+* **Java 17**: Versão LTS para máxima performance e estabilidade.
+* **Spring Boot 4.0.3**: Framework para construção da API REST e injeção de dependências.
+* **MongoDB**: Banco de dados NoSQL para armazenamento flexível de documentos.
+* **Spring Data MongoDB**: Abstração da camada de repositório para operações fluídas com o banco.
 
-## 🛠️ Como Executar o Projeto
+## 📋 Endpoints da API
 
-1.  Certifique-se de ter o **Java 17** e o **Maven** instalados.
-2.  Verifique se o seu serviço **MongoDB** está ativo na máquina ou via container.
-3.  Execute a aplicação através da sua IDE (IntelliJ/Eclipse) ou via linha de comando:
-    ```bash
-    ./mvnw spring-boot:run
-    ```
-4.  A API estará disponível por padrão na porta `8081`.
+A API expõe os seguintes recursos:
 
-## 📋 Endpoints Principais
-* `GET /clientes`: Lista todos os clientes cadastrados.
-* `POST /clientes`: Registra um novo cliente.
+### Clientes
+* `GET /clientes`: Retorna a lista de todos os clientes.
+* `POST /clientes`: Salva um novo registro de cliente.
+
+### Seguros
+* `GET /seguros`: Retorna a lista de todos os seguros cadastrados.
+* `POST /seguros`: Salva um novo seguro.
+
+## ⚙️ Configurações Aplicadas
+* **CORS**: Habilitado para permitir a comunicação com o frontend Angular.
+* **Porta**: O servidor executa por padrão na porta `8081`.
+
+## 🏁 Como Executar
+
+1.  Certifique-se de ter o **MongoDB** ativo.
+2.  Execute via Maven: `./mvnw spring-boot:run`
+
+---
+Desenvolvido por **Pedro Schmitz Sécio** – [LinkedIn](https://www.linkedin.com/in/pedro-schmitz014)

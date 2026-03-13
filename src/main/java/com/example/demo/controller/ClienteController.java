@@ -24,4 +24,7 @@ public class ClienteController {
     public Cliente salvar(@RequestBody Cliente novoCliente) {
         return repository.save(novoCliente);
     }
+
+    @DeleteMapping("/{id}")
+    public void excluir(@PathVariable String id) { repository.deleteById(id); }
 }
