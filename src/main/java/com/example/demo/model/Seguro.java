@@ -8,9 +8,9 @@ public class Seguro {
 
     @Id
     private String id;
-    private String nomeDoPlano;
-    private Double valorMensal;
-    private String clienteId; // Para sabermos de qual cliente é este seguro
+    private String tipoSeguro;
+    private Double valorPremio;
+    private String numeroApolice; // Para sabermos de qual cliente é este seguro
 
     // Construtor vazio exigido pelo Spring
     public Seguro() {}
@@ -24,27 +24,27 @@ public class Seguro {
         this.id = id;
     }
 
-    public String getNomeDoPlano() {
-        return nomeDoPlano;
+    public String getTipoSeguro() {
+        return tipoSeguro;
     }
 
-    public void setNomeDoPlano(String nomeDoPlano) {
-        this.nomeDoPlano = nomeDoPlano;
+    public void setTipoSeguro(String tipoSeguro) {
+        this.tipoSeguro = tipoSeguro;
     }
 
-    public Double getValorMensal() {
-        return valorMensal;
+    public Double getValorPremio() {
+        return valorPremio;
     }
 
-    public void setValorMensal(Double valorMensal) {
-        this.valorMensal = valorMensal;
+    public void setValorPremio(Double valorPremio) {
+        this.valorPremio = valorPremio;
     }
 
-    public String getClienteId() {
-        return clienteId;
+    public String getNumeroApolice() {
+        return numeroApolice;
     }
 
-    public void setClienteId(String clienteId) {
-        this.clienteId = clienteId;
+    public void setNumeroApolice(String numeroApolice) {
+        this.numeroApolice = numeroApolice;
     }
 }
